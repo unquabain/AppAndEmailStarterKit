@@ -1,0 +1,22 @@
+{
+	"_meta" : {
+		"extends" : "_default.json"
+	},
+	"title" : "Default Page",
+	"header" : {
+		"headline" : "Boilerplate Page"
+	},
+	"body" : {
+		"main" : {
+			"copy" : [
+				"<strong>Lorem ipsum dolor sit amet,</strong> consectetur adipiscing elit. Sed vitae dictum augue. Nam finibus sollicitudin purus vel consequat. Ut tempor quam quis tortor elementum, quis porttitor mauris volutpat. Nunc tempus vulputate commodo. Suspendisse tempor euismod orci in lacinia. Nulla sed velit orci. Nulla vel diam vel massa pharetra cursus. Ut at tincidunt ex, a tristique dui.",
+				"Cras aliquam lorem in justo euismod, nec eleifend mauris egestas. Ut fringilla leo a est cursus aliquet. Pellentesque et arcu vitae massa facilisis rhoncus sed vitae dui. Sed semper purus a purus vestibulum, at congue dolor tincidunt. In massa risus, egestas vitae enim nec, bibendum rutrum magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas dignissim diam ante, ac malesuada ex rhoncus ut. Aliquam imperdiet arcu varius velit sollicitudin commodo. Nullam ac massa tortor. Cras nunc ante, molestie eget diam at, sollicitudin dictum est. Proin sit amet facilisis eros, eu varius ligula. <a href=\"#\">Donec mollis orci id interdum maximus.</a>"
+			]
+		},
+		"sidebar" : {
+			"copy" : [
+				"<strong>Lorem ipsum dolor sit amet,</strong> consectetur adipiscing elit. Sed vitae dictum augue. Nam finibus sollicitudin purus vel consequat. Ut tempor quam quis tortor elementum, quis porttitor mauris volutpat. Nunc tempus vulputate commodo. Suspendisse tempor euismod orci in lacinia. Nulla sed velit orci. Nulla vel diam vel massa pharetra cursus. Ut at tincidunt ex, a tristique dui."
+			]
+		}
+	}
+}

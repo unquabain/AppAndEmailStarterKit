@@ -1,0 +1,20 @@
+$icon-font-path: "../fonts/";
+@import "fonts";
+@import "../bower_components/susy/sass/_susy.scss";
+
+.container
+{
+	@include container(960px);
+}
+.body
+{
+	.main
+	{
+		@include span(8 of 12);
+	}
+	.sidebar
+	{
+		@include span(4 of 12);
+		@include last;
+	}
+}
