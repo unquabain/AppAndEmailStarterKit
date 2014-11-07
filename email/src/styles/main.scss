@@ -1,2 +1,34 @@
 $text-pad: 20px;
 @import "ink";
+
+$color-background: #CCCCCC;
+$color-text: #333333;
+$color-white: #FEFEFE;
+$color-black: #222222;
+$color-primary: #DDFFEE;
+$color-secondary: #884400;
+
+body, table.body
+{
+	background-color: $color-background;
+}
+table.container
+{
+	background-color: $color-white;
+}
+#header td
+{
+	background-color: $color-primary;
+	&, *
+	{
+		color: $color-text;
+	}
+}
+#footer td
+{
+	background-color: $color-secondary;
+	&, *
+	{
+		color: $color-white;
+	}
+}

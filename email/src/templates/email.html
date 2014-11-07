@@ -4,5 +4,60 @@
 <link inline rel="stylesheet" type="text/css" href="styles/main.css"/>
 {{/ zurb.head }}
 {{# zurb.body }}
+{{# header }}<div id="header">
+	{{# zurb.container }}
+		{{# zurb.row }}
+			{{# zurb.eight_cols }}
+				{{# zurb.pad }}
+					{{# subject }}<h1>{{{ . }}}</h1>{{/ subject }}
+				{{/ zurb.pad }}
+			{{/ zurb.eight_cols }}
+			{{# zurb.last_four_cols }}
+				{{# zurb.center }}
+					{{# logo }}
+						<img class="center" border="0" width="{{ width }}" height="{{ height }}" style="width:{{ width }}px; height:{{ height }}px;" src="{{ src }}" alt="{{ alt }}">
+					{{/ logo }}
+				{{/ zurb.center }}
+			{{/ zurb.last_four_cols }}
+		{{/ zurb.row }}
+	{{/ zurb.container }}
+</div>{{/ header }}
+{{# body }}<div id="body">
+{{# zurb.container }}
+	{{# zurb.row  }}
+		{{# zurb.last_twelve_cols }}
+			{{# zurb.pad }}
+				<table cellspacing="0" cellpadding="0">
+				{{# copy }}
+				<tr><td class="p">{{{ . }}}</td></tr>
+				{{/ copy }}
+				</table>
+			{{/ zurb.pad }}
+		{{/ zurb.last_twelve_cols }}
+	{{/ zurb.row }}
+{{/ zurb.container }}
+</div>{{/ body }}
+{{# footer }}<div id="footer">
+{{# zurb.container }}
+	{{# zurb.row  }}
+		{{# zurb.last_twelve_cols }}
+			{{# zurb.pad }}
+			&copy; {{{ copyright }}}
+			{{/ zurb.pad }}
+		{{/ zurb.last_twelve_cols }}
+	{{/ zurb.row }}
+	{{# zurb.row  }}
+		{{# zurb.last_twelve_cols }}
+			{{# zurb.pad }}
+				<table cellspacing="0" cellpadding="0">
+				{{# legal }}
+				<tr><td class="p">{{{ . }}}</td></tr>
+				{{/ legal }}
+				</table>
+			{{/ zurb.pad }}
+		{{/ zurb.last_twelve_cols }}
+	{{/ zurb.row }}
+{{/ zurb.container }}
+</div>{{/ footer }}
 {{/ zurb.body }}
 {{/ zurb.html }}

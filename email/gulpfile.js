@@ -12,7 +12,7 @@ var connect = require('connect');
 var imagemin = require('gulp-imagemin');
 var pngcrush = require('imagemin-pngcrush');
 var rename = require('gulp-rename');
-var rendersvg = require('gulp-rendersvg');
+// var rendersvg = require('gulp-rendersvg');
 var fs = require('fs');
 var _ = require('underscore');
 var $ = require('gulp-load-plugins')();
@@ -151,7 +151,7 @@ gulp.task('merge', function(cb) {
 		_.each(touches, function(touch_fname) {
 			if (! touch_fname.match(/\.json$/)) return;
 			if (touch_fname.match(/^_/)) return;
-			var deck = extend_deck('./decks', touch_fname);
+			var deck = extend_deck('./src/decks', touch_fname);
 			deck = zurbify_deck(deck);
 			var incl = '\\.(mustache|html)$';
 			if ('_meta' in deck && 'templates' in deck._meta)
@@ -194,7 +194,7 @@ gulp.task('inline', ['merge'], function() {
     .pipe(inlineCss({
       preserveMediaQueries: true,
     }))
-    .pipe(rendersvg())
+    // .pipe(rendersvg())
     .pipe(replace(/><\/img/g, '/'))
     .pipe(htmlmin({
     	collapseWhitespace: true,
@@ -244,7 +244,7 @@ gulp.task('watch', function() {
     });
   gulp.watch([paths.html, paths.styles], ['reload']);
   gulp.watch(['src/styles/*.scss'], ['styles']);
-  gulp.watch(['src/decks/*.json','templates/*'], ['merge']);
+  gulp.watch(['src/decks/*.json','src/templates/*'], ['merge']);
 });
 
 gulp.task('clean', require('del').bind(null, [paths.dist, 'preview']));
