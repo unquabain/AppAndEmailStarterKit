@@ -25,12 +25,27 @@ var extend_deck = function(dname, fname)
 	}
 	return obj;
 }
+var deck_built_ins = {
+	"fn" : {
+		"inline" : function() {
+			return function(text, render) {
+				var filename = render(text);
+				var t = fs.readFileSync('./src/' + filename,"utf8");
+				return render(t);
+			}
+		}
+	}
+}
 gulp.task('merge', function(cb) {
 	fs.readdir('./src/decks/', function(err, touches) {
 		_.each(touches, function(touch_fname) {
 			if (! touch_fname.match(/\.json$/)) return;
 			if (touch_fname.match(/^_/)) return;
-			var deck = extend_deck('./src/decks', touch_fname);
+			var deck = extend(true,
+				deck_built_ins,
+				extend_deck('./src/decks', touch_fname)
+			);
+
 			var incl = '\\.(mustache|html)$';
 			if ('_meta' in deck && 'templates' in deck._meta) {
 				console.log(touch_fname + ": Overriding templates with ", deck._meta.templates);
